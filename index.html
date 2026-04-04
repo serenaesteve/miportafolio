@@ -90,12 +90,24 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:24px 60px;display:flex;j
 .proj-row:first-child{border-top:1px solid rgba(232,24,109,0.15)}
 .proj-row:hover .proj-num{color:var(--pink-hot)}
 .proj-row:hover .proj-name{color:var(--pink-hot)}
-.proj-row:hover .proj-arrow{transform:translateX(4px)}
+.proj-row:hover .pagination{display:flex;gap:12px;margin-top:48px;align-items:center}
+.pg-btn{width:44px;height:44px;border:1px solid rgba(232,24,109,0.35);background:transparent;color:var(--pink-hot);font-family:'Playfair Display',serif;font-size:0.95rem;font-style:italic;cursor:cursor;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.pg-btn:hover{background:rgba(232,24,109,0.08)}
+.pg-btn.active{background:var(--pink-hot);color:white;border-color:var(--pink-hot)}
+.proj-page{display:none}
+.proj-page.active{display:block}
+.proj-arrow{transform:translateX(4px)}
 .proj-num{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:rgba(0,0,0,0.2);text-align:right;transition:color 0.2s}
 .proj-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--black);margin-bottom:4px;letter-spacing:-0.3px;transition:color 0.2s}
 .proj-desc{font-size:0.78rem;font-weight:300;color:#777;line-height:1.5;max-width:560px}
 .proj-tags2{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .ptag{font-size:0.58rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--pink-hot);border:1px solid rgba(232,24,109,0.3);padding:2px 8px}
+.pagination{display:flex;gap:12px;margin-top:48px;align-items:center}
+.pg-btn{width:44px;height:44px;border:1px solid rgba(232,24,109,0.35);background:transparent;color:var(--pink-hot);font-family:'Playfair Display',serif;font-size:0.95rem;font-style:italic;cursor:cursor;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.pg-btn:hover{background:rgba(232,24,109,0.08)}
+.pg-btn.active{background:var(--pink-hot);color:white;border-color:var(--pink-hot)}
+.proj-page{display:none}
+.proj-page.active{display:block}
 .proj-arrow{width:36px;height:36px;flex-shrink:0;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
 #experiencia{background:var(--black);padding:120px 60px}
 .exp-inner{max-width:1100px;margin:0 auto}
@@ -218,7 +230,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         <span class="trait">Resolutiva</span><span class="trait">Marketing digital</span><span class="trait">IA aplicada</span>
       </div>
       <div class="contact-mini">
-        <a href="/cdn-cgi/l/email-protection#b1c2d4c3d4dfd0d4c2c5d4c7d4d4f1d6dcd0d8dd9fd2dedc"><div class="c-dot"></div><span class="__cf_email__" data-cfemail="c2b1a7b0a7aca3a7b1b6a7b4a7a782a5afa3abaeeca1adaf"><span class="__cf_email__" data-cfemail="2a594f584f444b4f595e4f5c4f4f6a4d474b434604494547"><span class="__cf_email__" data-cfemail="0d7e687f68636c687e79687b68684d6a606c6461236e6260"><span class="__cf_email__" data-cfemail="c8bbadbaada6a9adbbbcadbeadad88afa5a9a1a4e6aba7a5">[email&#160;protected]</span></span></span></span></a>
+        <a href="#" data-mail="3"><div class="c-dot"></div>serenaestevee@gmail.com</span></span></span></a>
         <span><div class="c-dot"></div>Mislata, Valencia</span>
         <a href="https://github.com/serenaesteve" target="_blank"><div class="c-dot"></div>github.com/serenaesteve</a>
         <a href="https://www.linkedin.com/in/serena-sania-esteve-00a1aa375/" target="_blank"><div class="c-dot"></div>linkedin.com/in/serena-sania-esteve</a>
@@ -256,8 +268,8 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
     </div>
     <p class="proj-count"><span>31</span> proyectos en total</p>
     <div class="proj-list">
-
-      <a class="proj-row" href="https://serenaesteve.github.io/thais/thais/" target="_blank">
+<div class="proj-page active" id="page-1">
+<a class="proj-row" href="https://serenaesteve.github.io/thais/thais/" target="_blank">
         <div class="proj-num">01</div>
         <div class="proj-body">
           <div class="proj-name">Thais Esteve · Fotografía</div>
@@ -266,7 +278,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/netflixthais" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/netflixthais" target="_blank">
         <div class="proj-num">02</div>
         <div class="proj-body">
           <div class="proj-name">Netflix Thais</div>
@@ -275,7 +287,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Web-portafolios" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/Web-portafolios" target="_blank">
         <div class="proj-num">03</div>
         <div class="proj-body">
           <div class="proj-name">Web Portafolios</div>
@@ -284,7 +296,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/crmserena" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/crmserena" target="_blank">
         <div class="proj-num">04</div>
         <div class="proj-body">
           <div class="proj-name">CRM Serena</div>
@@ -293,7 +305,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/correoimap" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/correoimap" target="_blank">
         <div class="proj-num">05</div>
         <div class="proj-body">
           <div class="proj-name">Correo IMAP</div>
@@ -302,7 +314,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/correothais" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/correothais" target="_blank">
         <div class="proj-num">06</div>
         <div class="proj-body">
           <div class="proj-name">Correo Thais</div>
@@ -311,7 +323,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/descargar-im-genes-de-internet" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/descargar-im-genes-de-internet" target="_blank">
         <div class="proj-num">07</div>
         <div class="proj-body">
           <div class="proj-name">Descargar Imágenes de Internet</div>
@@ -320,7 +332,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/descargar-im-genes-con-IA" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/descargar-im-genes-con-IA" target="_blank">
         <div class="proj-num">08</div>
         <div class="proj-body">
           <div class="proj-name">Descargar Imágenes con IA</div>
@@ -329,7 +341,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/ollamacurriculum" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/ollamacurriculum" target="_blank">
         <div class="proj-num">09</div>
         <div class="proj-body">
           <div class="proj-name">Ollama Currículum</div>
@@ -338,7 +350,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/webadopciones" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/webadopciones" target="_blank">
         <div class="proj-num">10</div>
         <div class="proj-body">
           <div class="proj-name">Web Adopciones</div>
@@ -347,7 +359,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/iaparadietetica" target="_blank">
+</div>
+<div class="proj-page " id="page-2">
+<a class="proj-row" href="https://github.com/serenaesteve/iaparadietetica" target="_blank">
         <div class="proj-num">11</div>
         <div class="proj-body">
           <div class="proj-name">IA para Dietética</div>
@@ -356,7 +370,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/iainicial" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/iainicial" target="_blank">
         <div class="proj-num">12</div>
         <div class="proj-body">
           <div class="proj-name">IA Inicial</div>
@@ -365,7 +379,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/logos" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/logos" target="_blank">
         <div class="proj-num">13</div>
         <div class="proj-body">
           <div class="proj-name">Logos</div>
@@ -374,7 +388,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/pug" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/pug" target="_blank">
         <div class="proj-num">14</div>
         <div class="proj-body">
           <div class="proj-name">Pug · Templating</div>
@@ -383,7 +397,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Tailwind" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/Tailwind" target="_blank">
         <div class="proj-num">15</div>
         <div class="proj-body">
           <div class="proj-name">Tailwind CSS</div>
@@ -392,7 +406,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/webconpanelcontrol" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/webconpanelcontrol" target="_blank">
         <div class="proj-num">16</div>
         <div class="proj-body">
           <div class="proj-name">Web con Panel de Control</div>
@@ -401,7 +415,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/entrenaria" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/entrenaria" target="_blank">
         <div class="proj-num">17</div>
         <div class="proj-body">
           <div class="proj-name">Entrenaria</div>
@@ -410,7 +424,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/petshop" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/petshop" target="_blank">
         <div class="proj-num">18</div>
         <div class="proj-body">
           <div class="proj-name">Pet Shop</div>
@@ -419,7 +433,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/paneldecontrolpetshop" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/paneldecontrolpetshop" target="_blank">
         <div class="proj-num">19</div>
         <div class="proj-body">
           <div class="proj-name">Panel de Control Pet Shop</div>
@@ -428,7 +442,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/paneladministraciontiendajuguetes" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/paneladministraciontiendajuguetes" target="_blank">
         <div class="proj-num">20</div>
         <div class="proj-body">
           <div class="proj-name">Tienda de Juguetes</div>
@@ -437,7 +451,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/tiendajuguetesmejorada" target="_blank">
+</div>
+<div class="proj-page " id="page-3">
+<a class="proj-row" href="https://github.com/serenaesteve/tiendajuguetesmejorada" target="_blank">
         <div class="proj-num">21</div>
         <div class="proj-body">
           <div class="proj-name">Tienda Juguetes Mejorada</div>
@@ -446,7 +462,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/articulosblogconia" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/articulosblogconia" target="_blank">
         <div class="proj-num">22</div>
         <div class="proj-body">
           <div class="proj-name">Blog Conia · Artículos</div>
@@ -455,7 +471,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/webcursoiamejorada" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/webcursoiamejorada" target="_blank">
         <div class="proj-num">23</div>
         <div class="proj-body">
           <div class="proj-name">Landing Curso IA</div>
@@ -464,7 +480,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/getypost-panelthais" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/getypost-panelthais" target="_blank">
         <div class="proj-num">24</div>
         <div class="proj-body">
           <div class="proj-name">Panel Admin · Getypost Thais</div>
@@ -473,7 +489,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/posicionamientoseo" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/posicionamientoseo" target="_blank">
         <div class="proj-num">25</div>
         <div class="proj-body">
           <div class="proj-name">Posicionamiento SEO</div>
@@ -482,7 +498,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/scrapearweb" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/scrapearweb" target="_blank">
         <div class="proj-num">26</div>
         <div class="proj-body">
           <div class="proj-name">Web Scraper</div>
@@ -491,7 +507,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Sistema-de-automatizaci-n-de-gesti-n-de-correos-electr-nicos" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/Sistema-de-automatizaci-n-de-gesti-n-de-correos-electr-nicos" target="_blank">
         <div class="proj-num">27</div>
         <div class="proj-body">
           <div class="proj-name">Sistema de Automatización de Correos</div>
@@ -500,7 +516,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://serenaesteve.github.io/Generador-autom-tico-de-presupuestos-y-facturas/" target="_blank">
+<a class="proj-row" href="https://serenaesteve.github.io/Generador-autom-tico-de-presupuestos-y-facturas/" target="_blank">
         <div class="proj-num">28</div>
         <div class="proj-body">
           <div class="proj-name">Generador de Presupuestos y Facturas</div>
@@ -509,7 +525,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Plataforma-de-clasificaci-n-documental-inteligente" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/Plataforma-de-clasificaci-n-documental-inteligente" target="_blank">
         <div class="proj-num">29</div>
         <div class="proj-body">
           <div class="proj-name">Plataforma de Clasificación Documental</div>
@@ -518,7 +534,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Herramienta-de-extracci-n-autom-tica-de-datos-" target="_blank">
+<a class="proj-row" href="https://github.com/serenaesteve/Herramienta-de-extracci-n-autom-tica-de-datos-" target="_blank">
         <div class="proj-num">30</div>
         <div class="proj-body">
           <div class="proj-name">Herramienta de Extracción Automática de Datos</div>
@@ -527,7 +543,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a class="proj-row" href="https://github.com/serenaesteve/Asistente-virtual-interno-para-empleados-que-permita-consultar-procedimientos" target="_blank">
+</div>
+<div class="proj-page " id="page-4">
+<a class="proj-row" href="https://github.com/serenaesteve/Asistente-virtual-interno-para-empleados-que-permita-consultar-procedimientos" target="_blank">
         <div class="proj-num">31</div>
         <div class="proj-body">
           <div class="proj-name">Asistente Virtual Interno para Empleados</div>
@@ -536,8 +554,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
         </div>
         <div class="proj-arrow"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H22M22 8L15 1M22 8L15 15" stroke="#E8186D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-    </div>
-  </div>
+</div>
+<div class="pagination"><button class="pg-btn active" onclick="showPage(1)" id="pg-btn-1">01</button><button class="pg-btn " onclick="showPage(2)" id="pg-btn-2">02</button><button class="pg-btn " onclick="showPage(3)" id="pg-btn-3">03</button><button class="pg-btn " onclick="showPage(4)" id="pg-btn-4">04</button></div>
+</div>
 </section>
 <section id="experiencia">
   <div class="exp-inner">
@@ -608,8 +627,155 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.05);p
       <div class="contact-left">
         <p>Estoy disponible para proyectos, colaboraciones y nuevas oportunidades. Escríbeme sin compromiso.</p>
         <div>
-          <a href="/cdn-cgi/l/email-protection#c1b2a4b3a4afa0a4b2b5a4b7a4a481a6aca0a8adefa2aeac" class="contact-line"><span class="cl-lbl">Email</span><span class="cl-val"><span class="__cf_email__" data-cfemail="a9daccdbccc7c8ccdaddccdfcccce9cec4c8c0c587cac6c4"><span class="__cf_email__" data-cfemail="f1829483949f9094828594879494b1969c90989ddf929e9c"><span class="__cf_email__" data-cfemail="a5d6c0d7c0cbc4c0d6d1c0d3c0c0e5c2c8c4ccc98bc6cac8"><span class="__cf_email__" data-cfemail="aad9cfd8cfc4cbcfd9decfdccfcfeacdc7cbc3c684c9c5c7">[email&#160;protected]</span></span></span></span></span></a>
+          <a href="#" data-mail="1" class="contact-line"><span class="cl-lbl">Email</span><span class="cl-val">serenaestevee@gmail.com</span></span></span></span></a>
           <a href="https://github.com/serenaesteve" target="_blank" class="contact-line"><span class="cl-lbl">GitHub</span><span class="cl-val">github.com/serenaesteve</span></a>
           <a href="https://www.linkedin.com/in/serena-sania-esteve-00a1aa375/" target="_blank" class="contact-line"><span class="cl-lbl">LinkedIn</span><span class="cl-val">serena-sania-esteve</span></a>
           <a href="tel:637383762" class="contact-line"><span class="cl-lbl">Teléfono</span><span class="cl-val">637 383 762</span></a>
-          <span class="contact-line"><span class="cl-lbl">Ubicación</span><span class="cl-val">Mi
+          <span class="contact-line"><span class="cl-lbl">Ubicación</span><span class="cl-val">Mislata, Valencia</span>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="big-cta">Let's<br><em>talk.</em></div>
+        <a href="#" data-mail="2" class="btn-big">Enviar mensaje</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Serena Sania Esteve</div>
+  <div class="f-copy">© 2025 · Full Stack Developer</div>
+</footer>
+
+<style>
+#serenagpt-btn{
+  position:fixed;
+  bottom:32px;
+  right:32px;
+  z-index:99999;
+  background:#E8186D;
+  color:white;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 24px;
+  border-radius:999px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:0.95rem;
+  letter-spacing:1px;
+  box-shadow:0 4px 24px rgba(232,24,109,0.5);
+  transition:all 0.25s;
+}
+#serenagpt-btn:hover{
+  background:#FF2D78;
+  transform:translateY(-3px);
+  box-shadow:0 8px 36px rgba(232,24,109,0.7);
+}
+</style>
+
+<a id="serenagpt-btn" href="https://serenaesteve.com/serenagpt/" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 6C4 4.9 4.9 4 6 4H22C23.1 4 24 4.9 24 6V18C24 19.1 23.1 20 22 20H8L4 24V6Z" fill="white"/>
+    <circle cx="9" cy="13" r="1.5" fill="#E8186D"/>
+    <circle cx="14" cy="13" r="1.5" fill="#E8186D"/>
+    <circle cx="19" cy="13" r="1.5" fill="#E8186D"/>
+  </svg>
+  SerenaGPT
+</a>
+
+<script>
+function showPage(n) {
+  document.querySelectorAll('.proj-page').forEach((p,i) => {
+    p.classList.toggle('active', i+1 === n);
+  });
+  document.querySelectorAll('.pg-btn').forEach((b,i) => {
+    b.classList.toggle('active', i+1 === n);
+  });
+  document.getElementById('proyectos').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+</script><script>
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
+},{threshold:0.05});
+document.querySelectorAll('.exp-card,.skill-item,.proj-row,.edu-entry,.cert').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';
+  el.style.transition='opacity 0.5s ease,transform 0.5s ease';
+  obs.observe(el);
+});
+
+function showPage(n) {
+  document.querySelectorAll('.proj-page').forEach((p,i) => {
+    p.classList.toggle('active', i+1 === n);
+  });
+  document.querySelectorAll('.pg-btn').forEach((b,i) => {
+    b.classList.toggle('active', i+1 === n);
+  });
+  document.getElementById('proyectos').scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
+
+<style>
+#serenagpt-btn{
+  position:fixed;bottom:32px;right:32px;z-index:99999;
+  background:#E8186D;color:white;text-decoration:none;
+  display:flex;align-items:center;gap:10px;
+  padding:14px 24px;border-radius:999px;
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:0.95rem;letter-spacing:1px;
+  box-shadow:0 4px 24px rgba(232,24,109,0.5);
+  transition:all 0.25s;
+}
+#serenagpt-btn:hover{background:#FF2D78;transform:translateY(-3px);box-shadow:0 8px 36px rgba(232,24,109,0.7)}
+</style>
+
+<a id="serenagpt-btn" href="https://serenaesteve.com/serenagpt/" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 6C4 4.9 4.9 4 6 4H22C23.1 4 24 4.9 24 6V18C24 19.1 23.1 20 22 20H8L4 24V6Z" fill="white"/>
+    <circle cx="9" cy="13" r="1.5" fill="#E8186D"/>
+    <circle cx="14" cy="13" r="1.5" fill="#E8186D"/>
+    <circle cx="19" cy="13" r="1.5" fill="#E8186D"/>
+  </svg>
+  SerenaGPT
+</a>
+
+
+<script>
+// Anti-Cloudflare email protection fix
+(function(){
+  const u = 'serenaestevee';
+  const d = 'gmail.com';
+  const email = u + '@' + d;
+  const mailto = 'mailto:' + email;
+  document.querySelectorAll('.email-link').forEach(el => {
+    el.href = mailto;
+    if(el.querySelector('.cl-val')) el.querySelector('.cl-val').textContent = email;
+    if(el.querySelector('.c-dot') && el.childNodes.length > 1) {
+      el.childNodes[el.childNodes.length-1].textContent = email;
+    }
+  });
+  document.querySelectorAll('.btn-big.email-link').forEach(el => {
+    el.href = mailto;
+  });
+})();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var u = 'serenaestevee';
+  var d = 'gmail.com';
+  var email = u + '@' + d;
+  var mailto = 'mailto:' + email;
+  document.querySelectorAll('[data-mail]').forEach(function(el) {
+    el.href = mailto;
+    var val = el.querySelector('.cl-val');
+    if (val) val.textContent = email;
+  });
+});
+</script>
+</body>
+</html>
