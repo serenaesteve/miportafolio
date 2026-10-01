@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FBF4F1">
+<title>Avatar 3D · Banco de pruebas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="avatar.css">
+<style>
+  :root { --pink:#E8186D; --ink:#1D1417; --bg:#FBF4F1; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink); font-family:'DM Sans',sans-serif; display:flex; flex-direction:column; }
+  header { padding:16px 20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; }
+  h1 { margin:0; font:700 1.2rem 'Playfair Display',serif; }
+  h1 em { color:var(--pink); font-weight:400; }
+  .controls { display:flex; flex-wrap:wrap; gap:8px; }
+  button, select { font:500 0.8rem 'DM Sans',sans-serif; padding:9px 14px; border-radius:999px; border:1px solid rgba(232,24,109,.35); background:#fff; color:var(--ink); cursor:pointer; }
+  button:hover { border-color:var(--pink); color:var(--pink); }
+  #stage { flex:1; min-height:70vh; }
+  footer { padding:10px 20px 18px; font-size:.75rem; color:#8a7a80; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Motor del avatar · <em>banco de pruebas</em></h1>
+  <div class="controls">
+    <button id="b-wave" type="button">👋 Saludar</button>
+    <button id="b-say" type="button">💬 Hablar</button>
+    <select id="b-profile" aria-label="Perfil de dispositivo">
+      <option value="">Perfil automático</option>
+      <option value="alto">Forzar: alto</option>
+      <option value="medio">Forzar: medio</option>
+      <option value="bajo">Forzar: bajo</option>
+      <option value="estatico">Forzar: estático (sin WebGL)</option>
+    </select>
+  </div>
+</header>
+
+<div id="stage"></div>
+
+<footer>Mueve el ratón, arrastra el dedo o inclina el móvil. El panel verde muestra el perfil detectado y el rendimiento.</footer>
+
+<script src="js/mini-gl.js"></script>
+<script src="js/device-profile.js"></script>
+<script src="js/avatar-model.js"></script>
+<script src="js/avatar-animator.js"></script>
+<script src="js/avatar-input.js"></script>
+<script src="js/avatar-behaviors.js"></script>
+<script src="js/avatar-engine.js"></script>
+<script>
+  var engine = SerenaAvatar.mount('#stage', {
+    debug: true,
+    basePath: '',
+    fallbackImage: 'assets/serena-color.webp'
+  });
+
+  document.getElementById('b-wave').onclick = function () { engine.greet('¡Hola! 👋'); };
+  document.getElementById('b-say').onclick = function () { engine.say('Keep coding & stay curious ✨'); };
+
+  var sel = document.getElementById('b-profile');
+  sel.value = new URLSearchParams(location.search).get('perfil') || '';
+  sel.onchange = function () {
+    var url = new URL(location.href);
+    if (sel.value) url.searchParams.set('perfil', sel.value); else url.searchParams.delete('perfil');
+    location.href = url.toString();
+  };
+</script>
+</body>
+</html>

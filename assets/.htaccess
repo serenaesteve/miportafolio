@@ -1,0 +1,9 @@
+# Caché del navegador: en las visitas siguientes el avatar sale al instante
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /avatar/tools/
+
+Sitemap: https://serenaesteve.com/sitemap.xml

@@ -1,0 +1,9 @@
+# La página y el service worker siempre se comprueban (así se ven enseguida
+# los cambios publicados); CSS, JS e imágenes llevan ?v=… y se guardan en caché.
+<IfModule mod_headers.c>
+  <FilesMatch "(\.html?|^sw\.js|\.webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+AddType application/manifest+json .webmanifest
+
